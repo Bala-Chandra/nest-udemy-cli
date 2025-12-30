@@ -1,6 +1,8 @@
 import { readFile, writeFile } from 'fs/promises';
+import { Injectable } from '@nestjs/common';
 import type { Message, MessagesMap } from './types/messge.type';
 
+@Injectable()
 export class MessagesRepository {
   private readonly filePath = 'messages.json';
 
